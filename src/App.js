@@ -1,7 +1,13 @@
+import GlobalStyled from './components/StyledGlobal';
+import SwichtOmni from "./components/SwicthOmni";
+
 function App() {
     return (
         <div className="App">
-            <h1>Omni.pro</h1>
+            <GlobalStyled />
+            <h1 className={''}>Omni.pro</h1>
+
+            <SwichtOmni />
         </div>
     );
 }
