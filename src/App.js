@@ -1,6 +1,7 @@
 import GlobalStyled from './components/StyledGlobal';
 import SwichtOmni from "./components/SwicthOmni";
 import ButtonOmni from "./components/ButtonOmni";
+import TextInputOmni from "./components/TextInputOmni";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
 
             <SwichtOmni />
             <ButtonOmni text={'Ingreso'}/>
+            <TextInputOmni text={'NOMBRE'}/>
         </div>
     );
 }
