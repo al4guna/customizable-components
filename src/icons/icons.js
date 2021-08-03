@@ -63,7 +63,7 @@ export const IconShape = props => {
 }
 
 //icon-star::before content: "\ea05";
-export const IconStart = props => {
+export const IconStar = props => {
     const {
         ...res
     } = props;
