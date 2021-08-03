@@ -1,9 +1,17 @@
 import React from 'react';
 import TextInputOmni from "../../TextInputOmni";
-import SwichtOmni from "../../SwicthOmni";
 import ButtonOmni from "../../ButtonOmni";
+import { useRegisterOmni } from "../../../talons/LoginOnmi/RegisterOmni/useRegisterOmni";
 
 const RegisterOmni = props => {
+    const {
+        handleSuccessChange
+    } = props;
+
+    const {
+        handleSubmit
+    } = useRegisterOmni({handleSuccessChange})
+
     return (
         <div>
             <TextInputOmni
@@ -23,7 +31,10 @@ const RegisterOmni = props => {
                 text={'CONTRASEÑA'}
                 placeholder={'********'}
             />
-            <ButtonOmni text={'Registro'}/>
+            <ButtonOmni
+                text={'Registro'}
+                onClick={handleSubmit}
+            />
 
         </div>
     )

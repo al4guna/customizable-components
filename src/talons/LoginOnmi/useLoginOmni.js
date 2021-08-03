@@ -2,7 +2,8 @@ import { useState} from "react";
 
 const LOGIN_STATUS = {
     SIGN_IN : 'SIGN_IN',
-    REGISTER: 'REGISTER'
+    REGISTER: 'REGISTER',
+    SUCCESS: 'SUCCESS'
 }
 
 export const useLoginOmni = () => {
@@ -13,9 +14,14 @@ export const useLoginOmni = () => {
         setLogin(LOGIN_STATUS[name]);
     }
 
+    const handleSuccessChange = () => {
+        setLogin(LOGIN_STATUS["SUCCESS"]);
+    }
+
     return {
         login,
         LOGIN_STATUS,
-        handleLoginChange
+        handleLoginChange,
+        handleSuccessChange
     }
 }

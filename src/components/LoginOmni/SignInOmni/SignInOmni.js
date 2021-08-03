@@ -7,8 +7,18 @@ import {
     TextNewsletter,
     LinkForgotPassword
 } from './styled';
+import { useSignInOmni } from "../../../talons/LoginOnmi/SignInOmni/useSignInOmni";
 
 const SignInOmni = props => {
+    const {
+        handleSuccessChange
+    } = props;
+
+    const {
+        handleSubmit,
+        handleNewsletter
+    } = useSignInOmni({ handleSuccessChange });
+
     return (
         <div>
             <TextInputOmni
@@ -21,10 +31,13 @@ const SignInOmni = props => {
                 placeholder={'******'}
             />
             <DivNewsletter>
-                <SwichtOmni />
+                <SwichtOmni onClick={handleNewsletter} />
                 <TextNewsletter>Suscribirse al Newsletter</TextNewsletter>
             </DivNewsletter>
-            <ButtonOmni text={'Ingreso'}/>
+            <ButtonOmni
+                text={'Ingreso'}
+                onClick={handleSubmit}
+            />
             <LinkForgotPassword>Olvide Contraseña</LinkForgotPassword>
         </div>
     )

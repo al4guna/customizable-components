@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLoginOmni } from "../../talons/LoginOnmi/useLoginOmni";
 import {
     Form,
     Button,
@@ -8,13 +7,20 @@ import {
 } from "./styled";
 import SignInOmni from "./SignInOmni";
 import RegisterOmni from "./RegisterOmni/RegisterOmni";
+import SuccessOmni from "../SuccessOmni";
+import { useLoginOmni } from "../../talons/LoginOnmi/useLoginOmni";
 
-const LoginOmni = props => {
+const LoginOmni = () => {
     const {
         login,
         LOGIN_STATUS,
-        handleLoginChange
-    } = useLoginOmni();
+        handleLoginChange,
+        handleSuccessChange
+    } = useLoginOmni({});
+
+    if(login === LOGIN_STATUS["SUCCESS"]) {
+        return <SuccessOmni />
+    }
 
     return (
         <DivLogin>
@@ -35,8 +41,16 @@ const LoginOmni = props => {
                 </Button>
             </DivContainerButton>
             <Form>
-                { login === LOGIN_STATUS["SIGN_IN"] && <SignInOmni /> }
-                { login === LOGIN_STATUS["REGISTER"] && <RegisterOmni /> }
+                { login === LOGIN_STATUS["SIGN_IN"] &&
+                    <SignInOmni
+                        handleSuccessChange={handleSuccessChange}
+                    />
+                }
+                { login === LOGIN_STATUS["REGISTER"] &&
+                    <RegisterOmni
+                        handleSuccessChange={handleSuccessChange}
+                    />
+                }
             </Form>
         </DivLogin>
     )
