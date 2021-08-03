@@ -103,7 +103,7 @@ export const IconMenu = props => {
         <Container >
             <Icon
                 {...res}
-                className={'icon icon-hamburger1'}
+                className={'icon icon-hamburger'}
             />
         </Container>
     )
@@ -119,7 +119,7 @@ export const IconBag = props => {
         <Container >
             <Icon
                 {...res}
-                className={'icon icon-hamburger1'}
+                className={'icon icon-bag'}
             />
         </Container>
     )
@@ -135,7 +135,7 @@ export const IconBack = props => {
         <Container >
             <Icon
                 {...res}
-                className={'icon icon-hamburger1'}
+                className={'icon icon-back'}
             />
         </Container>
     )
