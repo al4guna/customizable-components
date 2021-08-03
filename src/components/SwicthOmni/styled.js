@@ -21,7 +21,7 @@ export const SpanRound = styled.span`
 
     position: absolute;
     cursor: pointer;
-    top: 0;
+    top: 36%;
     left: 0;
     right: 0;
     bottom: 0 ;
