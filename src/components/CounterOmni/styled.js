@@ -9,13 +9,14 @@ export const ContainerCounter = styled.div`
     border: 1px solid #DEDEDE;
     background: #fff;
     width: 120px;
-    height: 40px;
+    height: 50px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
 `
 
 export const Text = styled.p`
     color: #33333A;
+    font-size: 14px;
     margin-right: 12px;
 `
 
