@@ -1,13 +1,11 @@
 import GlobalStyled from './components/StyledGlobal';
-import LoginPage from "./components/LoginPage";
-import ProductDetailPage from "./components/ProductDetailPage";
+import Router from "./components/Router/Router";
 
 function App() {
     return (
         <div className="App">
             <GlobalStyled />
-            {/*<LoginPage />*/}
-            <ProductDetailPage />
+            <Router/>
         </div>
     );
 }

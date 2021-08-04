@@ -73,6 +73,6 @@ export const ReadMore = styled.p`
 `
 
 export const ContainerProducts = styled.div`
-    padding: 0 20px;
+    padding-left: 20px;
     margin-bottom: 40px;
 `
